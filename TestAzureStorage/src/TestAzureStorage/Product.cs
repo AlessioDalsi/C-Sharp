@@ -13,13 +13,15 @@ namespace TestAzureStorage
 
         }
 
-        public Product(string partitionKey, string rowKey)
+        public Product(int categoryId, Guid id)
         {
-            this.PartitionKey = partitionKey;
-            this.RowKey = rowKey;
+            this.PartitionKey = categoryId.ToString();
+            this.CategoryId = categoryId;
+            this.RowKey = Id.ToString();
+            this.Id = Id;
         }
 
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
         public int CategoryId { get; set; }
