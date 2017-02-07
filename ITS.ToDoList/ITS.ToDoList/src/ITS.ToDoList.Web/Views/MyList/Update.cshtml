@@ -1,0 +1,9 @@
+﻿@model ITS.ToDoList.Web.Models.MyListViewModels.UpdateViewModel
+@{
+}
+<h1>Modifica dell'attivit&agrave; "@Model.Title"</h1>
+
+
+
+@Html.LabelFor(m => m.CreationDate)<br /> 
+@Html.EditorFor(m => m.CreationDate)

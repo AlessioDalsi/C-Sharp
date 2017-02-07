@@ -1,0 +1,41 @@
+﻿@model ITS.ToDoList.Web.Models.CategoriesViewModels.InsertViewModel
+
+@{
+}
+
+<h1>Inserimento nuova categoria</h1>
+<form asp-action="Insert" asp-controller="Categories" method="post">
+    <div class="row">
+        <div class="col-sm-3" asp-validation-summary="ModelOnly">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <label asp-for="@Model.Name"></label>
+        </div>
+        <div class="col-sm-9">
+            <input asp-for="@Model.Name" class="form-control" />
+            <span asp-validation-for="@Model.Name"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <label asp-for="@Model.Description"></label>
+        </div>
+        <div class="col-sm-9">
+            <textarea asp-for="@Model.Description" cols="40" rows="5" class="form-control"></textarea>
+            <span asp-validation-for="@Model.Description"></span>
+        </div>
+    </div>
+
+
+    <input type="submit" value="Salva" class="btn btn-primary" />
+    <a asp-action="Index" asp-controller="MyList" class="btn btn-default">Annulla</a>
+
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
