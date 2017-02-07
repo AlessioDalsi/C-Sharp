@@ -1,14 +1,19 @@
-﻿{
+{
   "version": "1.0.0-*",
   "buildOptions": {
     "emitEntryPoint": true
   },
 
   "dependencies": {
+    "Microsoft.Data.Edm": "5.8.2",
+    "Microsoft.Data.OData": "5.8.2",
+    "Microsoft.Data.Services.Client": "5.8.2",
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.1"
-    }
+    },
+    "System.Spatial": "5.8.2",
+    "WindowsAzure.Storage": "8.0.1"
   },
 
   "frameworks": {

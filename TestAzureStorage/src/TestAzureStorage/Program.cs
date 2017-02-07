@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.Storage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace TestAzureStorage
     {
         public static void Main(string[] args)
         {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("UseDevelopmentStorageAccount=True");
         }
     }
 }
